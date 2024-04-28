@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+
+    <div class="input-data">
+        <label><b>QUIZ SHEET ID</b></label>
+        <input type="text" placeholder="QUIZ SHEET ID" id="quiz_id" required>
+        <label><b>SCORE SHEET ID</b></label>
+        <input type="text" placeholder="SCORE SHEET ID" id="sub_id" required>
+        <label><b>NAME</b></label>
+        <input type="text" placeholder="NAME" id="name_id" required>
+        <label><b>ID/ROLL-NO</b></label>
+        <input type="text" placeholder="ROLL-NO" id="roll_id" required>
+
+        <button id="join_quiz">ENTER</button>
+    </div>
+
+    <div class="board">
+        <h1>
+            YOUR SHEET--YOUR DATABASE--YOUR QUIZZZ
+        </h1>
+
+
+    </div>
+
+
+
+</body>
+<script>
+
+    const enter = document.getElementById("join_quiz");
+    const quiz_id = document.getElementById("quiz_id");
+    const name_id = document.getElementById("name_id");
+    const roll_id = document.getElementById("roll_id");
+    const sub_id = document.getElementById("sub_id");
+
+    
+    function data_send() {
+    
+        if (quiz_id.value==="" || name_id.value==="" || roll_id.value==="" || sub_id.value==="") {
+        alert("PLEASE FILL THE INPUT FIELDS");
+    }
+    
+    else{
+        localStorage.setItem('quiz_id',quiz_id.value)
+        localStorage.setItem('sub_id',sub_id.value)
+        localStorage.setItem('name_id',name_id.value)
+        localStorage.setItem('roll_id',roll_id.value)
+        window.location.href="./quizz.html"
+    }
+    
+}
+    enter.onclick = data_send
+    
+</script>
+
+</html>
