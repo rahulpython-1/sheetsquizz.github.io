@@ -14,7 +14,7 @@ let rid = localStorage.getItem("roll_id");
 
 name_id.style.paddingLeft = "10px";
 
-name_id.textContent = `WELCOME--${nid.toUpperCase()}`;
+name_id.textContent = `WELCOME To Quizz--${nid.toUpperCase()}`;
 
 function template(i, p1, o1, o2, o3, o4, checking) {
   let main = document.createElement("div");
